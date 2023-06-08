@@ -62,8 +62,7 @@ public class SwerveSubsystem extends SubsystemBase {
     }
 
     public Command zeroHeading() {
-        gyro.reset();
-        return null;
+        return Commands.runOnce(() -> gyro.reset());
     }
 
     public double getHeading() {

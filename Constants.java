@@ -18,9 +18,9 @@ public class Constants {
 
     public static final class DriveConstants {
 
-        public static final double kTrackWidth = Units.inchesToMeters(21); // CHANGE FOR OUR ROBOT
+        public static final double kTrackWidth = Units.inchesToMeters(23.5); // CHANGE FOR OUR ROBOT
         // Distance between right and left wheels
-        public static final double kWheelBase = Units.inchesToMeters(25.5); // CHANGE FOR OUR ROBOT
+        public static final double kWheelBase = Units.inchesToMeters(23.5); // CHANGE FOR OUR ROBOT
         // Distance between front and back wheels
         public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(
                 new Translation2d(kWheelBase / 2, -kTrackWidth / 2),
@@ -28,12 +28,12 @@ public class Constants {
                 new Translation2d(-kWheelBase / 2, -kTrackWidth / 2),
                 new Translation2d(-kWheelBase / 2, kTrackWidth / 2));
 
-        public static final int kFrontLeftDriveMotorPort = 8;
+        public static final int kFrontLeftDriveMotorPort = 25;
         public static final int kBackLeftDriveMotorPort = 2;
-        public static final int kFrontRightDriveMotorPort = 6;
+        public static final int kFrontRightDriveMotorPort = 26;
         public static final int kBackRightDriveMotorPort = 4;
 
-        public static final int kFrontLeftTurningMotorPort = 7;
+        public static final int kFrontLeftTurningMotorPort = 27;
         public static final int kBackLeftTurningMotorPort = 1;
         public static final int kFrontRightTurningMotorPort = 5;
         public static final int kBackRightTurningMotorPort = 3;
