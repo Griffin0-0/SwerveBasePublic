@@ -7,12 +7,13 @@ import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.ModuleConstants;
 
 import com.ctre.phoenix.sensors.CANCoder;
 
-public class SwerveModule {
+public class SwerveModule extends SubsystemBase{
 
     private final CANSparkMax driveMotor;
     private final CANSparkMax turningMotor;
@@ -33,7 +34,9 @@ public class SwerveModule {
         this.absoluteEncoderReversed = absoluteEncoderReversed;
         absoluteEncoder = new CANCoder(absoluteEncoderId);
         
+        System.out.println("Creating Drive Controller, ID " + driveMotorId);
         driveMotor = new CANSparkMax(driveMotorId, MotorType.kBrushless);
+        System.out.println("Creating Turning Controller, ID " + turningMotorId);
         turningMotor = new CANSparkMax(turningMotorId, MotorType.kBrushless);
         
         driveMotor.setInverted(driveMotorReversed);

@@ -57,6 +57,7 @@ public class SwerveJoystickCmd extends CommandBase {
                     xSpeed, ySpeed, turningSpeed, swerveSubsystem.getRotation2d());
         } else {
             // Relative to robot
+            System.out.println("Relative");
             chassisSpeeds = new ChassisSpeeds(xSpeed, ySpeed, turningSpeed);
         }
 
